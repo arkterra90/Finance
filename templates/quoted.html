@@ -1,0 +1,12 @@
+{% extends "quote.html" %}
+
+{% block quoted %}
+
+<h3> Quote for: </h3>
+
+<p>Name: {{ stock_quote["name"] }}</p>
+<p>Price: ${{ stock_quote["price"] | usd }}</p>
+<p>Symbol: {{ stock_quote["symbol"] }}</p>
+
+
+{% endblock %}

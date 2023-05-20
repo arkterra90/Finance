@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<h2>Stock History</h2>
+
+<div>
+    <table class="inlineTable">
+        <tr>
+            <th>Stock Bought</th>
+            {% for row in purchases: %}
+            <tr>
+                <td>{{ row["symbol"] }}</td>
+            </tr>
+            {% endfor %}
+        </tr>
+    </table>
+
+    <table class="inlineTable">
+        <tr>
+            <th>Quantity of Shares Purchased</th>
+
+            {% for row in buy: %}
+            <tr>
+                <td>{{ row["quantity"] }}  </td>
+            </tr>
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+
+{% endblock %}

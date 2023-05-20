@@ -1,1 +1,80 @@
+{% extends "layout.html" %}
 
+{% block main %}
+
+<h2>Stocks Owned</h2>
+<div>
+    <table class="inlineTable">
+        <tr>
+            <th>Cash Ballance</th>
+            <th>Current Total Value of Stocks</th>
+            <th>Total Value</th>
+            <tr>
+                {% for number in user_fin %}
+
+                <td> {{ number | usd }} </td>
+
+                {% endfor %}
+            </tr>
+        </tr>
+    </table>
+</div>
+<hr>
+<div>
+    <table class="inlineTable">
+        <tr>
+            <th>Stock Symbol</th>
+            <td>
+                {% for symbol in symbol_shares %}
+                <tr>
+                    <td> {{ symbol }} </td>
+                </tr>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+
+    <table class="inlineTable">
+        <tr>
+            <th>Shares Owned</th>
+            <td>
+                {% for symbol in symbol_shares %}
+                <tr>
+                    <td>{{ symbol_shares[symbol] }}</td>
+                </tr>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+
+    <table class="inlineTable">
+        <tr>
+            <th>Current Price</th>
+            <td>
+                {% for symbol in symbol_prices %}
+                <tr>
+                    <td>
+                        {{ symbol_prices[symbol] | usd }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+
+    <table class="inlineTable">
+        <tr>
+            <th>Holding Value</th>
+            <td>
+                {% for symbol in total_value %}
+                <tr>
+                    <td> {{ total_value[symbol] | usd }} </td>
+                </tr>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+</div>
+</hr>
+
+{% endblock %}

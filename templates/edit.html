@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<form action="/edit" method="post">
+    <div class="mb-3">
+        <input autocomplet="off" autofocus id="updated_password" name="updated_password" placeholder="New Password" type="passoword">
+    </div>
+    <div>
+        <input autocomplet="off" autofocus id="confirmation" name="confirmation" placeholder="Confirmation" type="passoword">
+    </div>
+    <p></p>
+    <div>
+        <button class="btn btn-primary" type="submit">Update Password</button>
+    </div>
+</form>
+
+{% endblock %}
