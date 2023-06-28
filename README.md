@@ -1,5 +1,5 @@
 # Finance
-#### Finance is a flask based web app created in CS50 for the purpose of demonstrating profenciency in web development.
+#### Finance is a flask based web app created in [CS50](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x) for the purpose of demonstrating profenciency in web development.
 
 ***
 
